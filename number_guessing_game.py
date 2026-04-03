@@ -13,6 +13,7 @@ tries = 0
 
 # While loop so the user is prompted for input if they input the wrong infomation the first time. 
 while running == True:
+    
     try:
         
         # User input for the guess.
@@ -28,11 +29,11 @@ while running == True:
             tries += 1
             print(f"Sorry! {guess} is higher than the correct guess! Try again!")
             
-
         # If statement to check if the number is correct and then tells the lucky winner they won in x amount of tries! 
         elif guess == random_number:
             tries += 1
             print(f"WOW! You got it! It only took {tries} times to guess the correct number!")
+            exit
         
     # Error handling for silly duffas that put the wrong info into the console. 
     except ValueError:
