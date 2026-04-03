@@ -1,6 +1,9 @@
 # Import to support the random.randint used for the dice roll
 import random
 
+# Declared number of dice rolled for ongoing total
+number_of_dice_rolled = 0
+
 # While loop to keep the dice rolling running unless the user says "n"
 while True:
     
@@ -18,7 +21,10 @@ while True:
         for i in range(how_many) :
             randomnum = random.randint(1,6)
             print(f"The dice says {randomnum}")
-        
+            # Increase number dice rolls based on how many times the for loop runs through
+            number_of_dice_rolled += 1
+            
+        print(f"The dice have been rolled {number_of_dice_rolled} times! WOW!")
     
     # Actions if the user presses "N" - Thanks them for playing and then breaks the while loop and exits the program. 
     elif answer == "N":
