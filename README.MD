@@ -1,0 +1,1 @@
+Original video for project ideas can be found here: https://www.youtube.com/watch?v=yVl_G-F7m8c
