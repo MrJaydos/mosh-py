@@ -6,12 +6,14 @@ while True:
     
     # User input in the console. Also converts to a upper case to allow for less options in the if statement
     answer = input("Would you like to roll the dice? (Y, N): ").upper()
+    
+    # Try loop to avoid errors from users inputting the wrong data type.
     try:
         how_many = int(input("How many dice would you like to roll? "))
     except ValueError:
         print("That is not a valid integer")
     
-    # Actions if the user presses "Y" - Rolls two random integers and then prints them to the console.
+    # Actions if the user presses "Y" - Rolls user defined amount of random integers and then prints them to the console.
     if answer == "Y":
         for i in range(how_many) :
             randomnum = random.randint(1,6)
