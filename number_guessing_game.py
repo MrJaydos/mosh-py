@@ -10,14 +10,19 @@ running = True
 # Keeping track with the tries variable
 tries = 0
 
+lower_number = 0
+higher_number = 0
 
-# While loop so the user is prompted for input if they input the wrong infomation the first time. 
+# While loop so the user is prompted for input if they input the wrong information the first time. 
 while running == True:
     
     try:
-        
+        if lower_number == 0 & higher_number == 0:
+            print("Please input 2 numbers to play the number guessing game. You will be guessing numbers between these two numbers.")
+            lower_number = int(input("Input a lower number: "))
+            higher_number = int(input("Input a higher number: "))
         # User input for the guess.
-        guess = int(input("Guess a number between 1 & 100: "))
+        guess = int(input(f"Guess a number between {lower_number} & {higher_number}: "))
         
         # If statement to check if the number is below the the correct guess and then adds one number to tries variable
         if guess < random_number:
