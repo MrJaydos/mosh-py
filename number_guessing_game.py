@@ -13,11 +13,16 @@ tries = 0
 
 # While loop so the user is prompted for input if they input the wrong infomation the first time. 
 while running == True:
-    
     try:
-        
+        number_range_lower = int(input("Please input the lower number in the range you want to guess from: "))
+        number_range_upper = int(input("Please input the upper number in the range you want to guess from: "))
+    except:
+        print("That is not a valid number. Please try again with a number like '12' and not a word.")
+
+    try:        
         # User input for the guess.
         guess = int(input("Guess a number between 1 & 100: "))
+        
         
         # If statement to check if the number is below the the correct guess and then adds one number to tries variable
         if guess < random_number:
