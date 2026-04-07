@@ -10,8 +10,10 @@ running = True
 # Keeping track with the tries variable
 tries = 0
 
+lower_number = 0
+higher_number = 0
 
-# While loop so the user is prompted for input if they input the wrong infomation the first time. 
+# While loop so the user is prompted for input if they input the wrong information the first time. 
 while running == True:
     try:
         number_range_lower = int(input("Please input the lower number in the range you want to guess from: "))
