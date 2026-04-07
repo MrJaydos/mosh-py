@@ -19,8 +19,8 @@ while True:
     # Actions if the user presses "Y" - Rolls user defined amount of random integers and then prints them to the console.
     if answer == "Y":
         for i in range(how_many) :
-            randomnum = random.randint(1,6)
-            print(f"The dice says {randomnum}")
+            random_num = random.randint(1,6)
+            print(f"The dice says {random_num}")
             # Increase number dice rolls based on how many times the for loop runs through
             number_of_dice_rolled += 1
             
